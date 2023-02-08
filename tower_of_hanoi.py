@@ -32,7 +32,8 @@ def towerOfHanoi_start():
   moves = Label( towerOfHanoiWindow, text=f"{movescount} Moves", fg="#FFFFFF", font=("Arial 20"), bg="#1E2665" )
   # sets label widget's position and centered alignment
   moves.place( relx=0.5, rely=0.22, anchor=CENTER )
-
+  # sets the canvas width and height which contains the poles png and disks' images
+  canvas = Canvas( towerOfHanoiWindow, width=550, height=350, background="#1E2665", bd=0, highlightthickness=0 )  
 
 
 
