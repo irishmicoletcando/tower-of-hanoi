@@ -175,7 +175,6 @@ def move( item, to_rod ):
     if( allPositionY[3]!= to_rod ):
       # loads an image of disk 4 and displays it on the canvas widget
       disk4 = ImageTk.PhotoImage( Image.open("4.png") )
-      print( allPositionX.count(to_rod) )
       # displays disk 4 on the canvas widget at the target rod's y-position and a calculated x-position
       canvas.create_image(to_rod, 145 - (45 * allPositionY.count(to_rod)), anchor=NW, image=disk4 )
       # stores the updated rod position of disk 4
