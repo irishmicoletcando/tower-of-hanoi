@@ -113,7 +113,8 @@ def TowerOfHanoi(disk, from_rod, to_rod, aux_rod):
 # updates the position of the disks on the canvas as they are moved during the game
 # takes two arguments, the item (disk) to be moved and its destination (to_rod)
 def move( item, to_rod ):
-
+  global disk1, disk2, disk3, disk4
+  
 
 def playAgainTowerOfHanoi():
   movescount = 0
