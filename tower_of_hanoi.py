@@ -159,7 +159,22 @@ def move( item, to_rod ):
       Tk.update(towerOfHanoiWindow) 
       return
 
-      
+  # moves disk 4 on the tower of hanoi game window
+  else:
+    # checks if disk 4 is not already on the target rod (specified by the "to_rod" variable) before moving it
+    if( allPositionY[3]!= to_rod ):
+      # loads an image of disk 4 and displays it on the canvas widget
+      disk4 = ImageTk.PhotoImage( Image.open("4.png") )
+      print( allPositionX.count(to_rod) )
+      # displays disk 4 on the canvas widget at the target rod's y-position and a calculated x-position
+      canvas.create_image(to_rod, 145 - (45 * allPositionY.count(to_rod)), anchor=NW, image=disk4 )
+      # stores the updated rod position of disk 4
+      allPositionY[3] = to_rod
+      allPositionX[3] = 145 - (45 * allPositionY.count(to_rod))
+      # updates the window
+      Tk.update(towerOfHanoiWindow) 
+      return
+
 def playAgainTowerOfHanoi():
   movescount = 0
 
