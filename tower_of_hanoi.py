@@ -10,6 +10,10 @@ towerOfHanoiWindow.title( "Tower of Hanoi Solver" )
 towerOfHanoiWindow.geometry( "800x500")
 # sets opacity of window; 1 - no opacity 
 towerOfHanoiWindow.attributes( "-alpha", 1 )
+# sets background color of window 
+towerOfHanoiWindow.configure( background="#1E2665" )
+
+
 
 def TowerOfHanoi(disk, from_rod, to_rod, aux_rod):
     if disk == 0:
