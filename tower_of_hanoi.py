@@ -34,6 +34,8 @@ def towerOfHanoi_start():
   moves.place( relx=0.5, rely=0.22, anchor=CENTER )
   # sets the canvas width and height which contains the poles png and disks' images
   canvas = Canvas( towerOfHanoiWindow, width=550, height=350, background="#1E2665", bd=0, highlightthickness=0 )  
+  # sets the position of canvas and centered alignment
+  canvas.place( relx=0.5, rely=0.6, anchor=CENTER )
 
 
 
