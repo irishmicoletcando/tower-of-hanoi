@@ -23,5 +23,8 @@ def TowerOfHanoi(disk, from_rod, to_rod, aux_rod):
     TowerOfHanoi(disk-1, aux_rod, to_rod, from_rod)
 
 
+# starts the main event loop of the GUI window
+towerOfHanoiWindow.mainloop()
+
 # References used:
 # Tower of Hanoi Recursion: https://www.geeksforgeeks.org/c-program-for-tower-of-hanoi/
