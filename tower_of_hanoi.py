@@ -19,6 +19,8 @@ towerOfHanoiTitle = Label( towerOfHanoiWindow, text="Tower of Hanoi", fg="#FFFFF
 # creates a label widget for objective
 towerOfHanoiTitle = Label( towerOfHanoiWindow, text="Objective: Helps user to visualize how a 4-disk Tower of Hanoi can be solved", fg="#FFFFFF", font=("Arial 15"), bg="#1E2665" ).pack()
 
+# declares the initial move count
+movescount = 0
 
 # sets up the initial state of the game
 def towerOfHanoi_start():
