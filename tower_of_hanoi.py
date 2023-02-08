@@ -185,9 +185,15 @@ def move( item, to_rod ):
       Tk.update(towerOfHanoiWindow) 
       return
 
-def playAgainTowerOfHanoi():
-  movescount = 0
 
+# user clicks play again button
+def playAgainTowerOfHanoi():
+  # resets the number of moves
+  movescount = 0
+  Label.destroy(moves)
+
+
+  
 # starts the game
 towerOfHanoi_start()
 # starts the main event loop of the GUI window
