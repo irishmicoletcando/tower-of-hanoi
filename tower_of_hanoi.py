@@ -92,17 +92,23 @@ def towerOfHanoi_start():
   # displays the largest disk png on the specific position
   canvas.create_image( allPositionY[3], allPositionX[3], anchor=NW, image=disk4 )
 
+
+# implements the logic of the Tower of Hanoi game
+# takes four arguments, the number of disks (disk), the source (from_rod), destination (to_rod), and auxiliary poles (aux_rod)
 def TowerOfHanoi(disk, from_rod, to_rod, aux_rod):
     if disk == 0:
-        return
+      movescount+=1
+      return
     TowerOfHanoi(disk-1, from_rod, aux_rod, to_rod)
     print("Move disk", disk, "from rod", from_rod, "to rod", to_rod)
     TowerOfHanoi(disk-1, aux_rod, to_rod, from_rod)
 
 
-# def playAgainTowerOfHanoi():
+def playAgainTowerOfHanoi():
+  movescount = 0
 
-
+# starts the game
+towerOfHanoi_start()
 # starts the main event loop of the GUI window
 towerOfHanoiWindow.mainloop()
 
