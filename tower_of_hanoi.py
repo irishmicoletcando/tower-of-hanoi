@@ -188,12 +188,15 @@ def move( item, to_rod ):
 
 # user clicks play again button
 def playAgainTowerOfHanoi():
+  global disk1, disk2, disk3, disk4, allPositionX, allPositionY, movescount
   # resets the number of moves
   movescount = 0
   Label.destroy(moves)
+  # calls the initial state of the game
+  towerOfHanoi_start()
 
 
-  
+
 # starts the game
 towerOfHanoi_start()
 # starts the main event loop of the GUI window
