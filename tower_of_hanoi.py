@@ -51,6 +51,13 @@ def towerOfHanoi_start():
   # sets the position of start button
   startGame.place( relx=0.5, rely=0.95, anchor=SE )
 
+  # creates a play again button that pass the function of playAgainTowerOfHanoi
+  playAgainGame = Button( towerOfHanoiWindow, text="PLAY AGAIN", fg="#FFFFFF", font=("Arial 30 bold"), bg="#FFFFFF", activebackground="#FFFFFF", highlightbackground="#71CAD3", justify=CENTER, command=lambda:playAgainTowerOfHanoi(), width=12, bd=0 )
+  # sets the background color of play again button
+  playAgainGame.configure( bg="#555B91" )
+  # sets the position of play again button
+  playAgainGame.place( relx=0.52, rely=0.95, anchor=SW )
+
 
 def TowerOfHanoi(disk, from_rod, to_rod, aux_rod):
     if disk == 0:
@@ -58,6 +65,12 @@ def TowerOfHanoi(disk, from_rod, to_rod, aux_rod):
     TowerOfHanoi(disk-1, from_rod, aux_rod, to_rod)
     print("Move disk", disk, "from rod", from_rod, "to rod", to_rod)
     TowerOfHanoi(disk-1, aux_rod, to_rod, from_rod)
+
+
+def TowerOfHanoi( disk , from_rod, to_rod, aux_rod ):
+
+
+def playAgainTowerOfHanoi():
 
 
 # starts the main event loop of the GUI window
