@@ -19,6 +19,18 @@ towerOfHanoiTitle = Label( towerOfHanoiWindow, text="Tower of Hanoi", fg="#FFFFF
 # creates a label widget for objective
 towerOfHanoiTitle = Label( towerOfHanoiWindow, text="Objective: Helps user to visualize how a 4-disk Tower of Hanoi can be solved", fg="#FFFFFF", font=("Arial 15"), bg="#1E2665" ).pack()
 
+
+# sets up the initial state of the game
+def towerOfHanoi_start():
+  # sets the x - position of disk
+  allPositionX=[]
+  # sets the y - position of disk
+  allPositionY=[]
+
+
+
+
+
 def TowerOfHanoi(disk, from_rod, to_rod, aux_rod):
     if disk == 0:
         return
