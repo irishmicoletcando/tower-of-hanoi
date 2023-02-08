@@ -24,6 +24,8 @@ movescount = 0
 
 # sets up the initial state of the game
 def towerOfHanoi_start():
+  # declares global variable to be used anywhere in the program
+  global allPositionX, allPositionY, canvas, pole, disk1, disk2, disk3, disk4, moves, movescount
   # sets the x - position of disk
   allPositionX=[]
   # sets the y - position of disk
