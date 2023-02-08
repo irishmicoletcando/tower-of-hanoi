@@ -28,7 +28,10 @@ def towerOfHanoi_start():
   allPositionX=[]
   # sets the y - position of disk
   allPositionY=[]
-
+  # creates a label widget for number of moves
+  moves = Label( towerOfHanoiWindow, text=f"{movescount} Moves", fg="#FFFFFF", font=("Arial 20"), bg="#1E2665" )
+  # creates a label widget for number of moves
+  moves = Label( towerOfHanoiWindow, text=f"{movescount} Moves", fg="#FFFFFF", font=("Arial 20"), bg="#1E2665" )
 
 
 
