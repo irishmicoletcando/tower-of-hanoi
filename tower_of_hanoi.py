@@ -118,6 +118,14 @@ def move( item, to_rod ):
   if( allPositionY[0]!=to_rod ):
     # loads an image of disk 1 and displays it on the canvas widget
     disk1 = ImageTk.PhotoImage( Image.open("1.png") )
+    # displays disk 1 on the canvas widget at the target rod's y-position and a calculated x-position
+    canvas.create_image( to_rod, 145 - (45 * allPositionY.count(to_rod)), anchor=NW, image=disk1 ) # position disk exactly above the larger disk with only a small gap
+    # stores the updated rod position of disk 1
+    allPositionY[0] = to_rod
+    allPositionX[0] = 145 - (45 * allPositionY.count(to_rod))
+    # updates the window
+    Tk.update(towerOfHanoiWindow) 
+    return
 
 def playAgainTowerOfHanoi():
   movescount = 0
@@ -129,3 +137,6 @@ towerOfHanoiWindow.mainloop()
 
 # References used:
 # Tower of Hanoi Recursion: https://www.geeksforgeeks.org/c-program-for-tower-of-hanoi/
+# For aligning in center: https://www.tutorialspoint.com/python/tk_anchors.htm
+# For creating GUI window: https://www.youtube.com/watch?v=ibf5cx221hk
+# For buttons with functions: https://www.tutorialspoint.com/tkinter-button-commands-with-lambda-in-python
