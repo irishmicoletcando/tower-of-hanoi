@@ -13,7 +13,8 @@ towerOfHanoiWindow.attributes( "-alpha", 1 )
 # sets background color of window 
 towerOfHanoiWindow.configure( background="#1E2665" )
 
-
+# creates a label widget for tower of hanoi title
+towerOfHanoiTitle = Label( towerOfHanoiWindow, text="Tower of Hanoi", fg="#FFFFFF", font=("Arial 30"), bg="#1E2665" ).pack()
 
 def TowerOfHanoi(disk, from_rod, to_rod, aux_rod):
     if disk == 0:
