@@ -104,9 +104,15 @@ def TowerOfHanoi(disk, from_rod, to_rod, aux_rod):
       # displays the number of moves made during the game
       moves.configure( text=str(movescount) + " Moves" )
       return
+    # uses a recursive approach to solve the game by moving the (disk-1) disks to the auxiliary pole, then moving the nth disk to the destination pole, and finally moving the (disk-1) disks to the destination pole.
     TowerOfHanoi(disk-1, from_rod, aux_rod, to_rod)
 
     TowerOfHanoi(disk-1, aux_rod, to_rod, from_rod)
+
+
+# updates the position of the disks on the canvas as they are moved during the game
+# takes two arguments, the item (disk) to be moved and its destination (to_rod)
+def move( item, to_rod ):
 
 
 def playAgainTowerOfHanoi():
