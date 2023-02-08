@@ -8,7 +8,8 @@ towerOfHanoiWindow = Tk()
 towerOfHanoiWindow.title( "Tower of Hanoi Solver" )
 # sets size of window with a width of 800 and height of 500
 towerOfHanoiWindow.geometry( "800x500")
-
+# sets opacity of window; 1 - no opacity 
+towerOfHanoiWindow.attributes( "-alpha", 1 )
 
 def TowerOfHanoi(disk, from_rod, to_rod, aux_rod):
     if disk == 0:
