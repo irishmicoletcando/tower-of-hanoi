@@ -44,6 +44,7 @@ def towerOfHanoi_start():
   # displays the image on the specific position
   canvas.create_image( -20, -20, anchor=NW, image=pole )
 
+  # --------------------- BUTTONS ------------------------
   # creates a start button that pass the function of TowerOfHanoi
   startGame = Button( towerOfHanoiWindow, text ="START", fg="#FFFFFF", font=("Arial 30 bold"), bg="#FFFFFF", activebackground="#FFFFFF", highlightbackground="#71CAD3", justify=CENTER, command=lambda:TowerOfHanoi(4 , 0, 360, 180), width=12, bd=0 )
   # sets the background color of start button
@@ -58,6 +59,15 @@ def towerOfHanoi_start():
   # sets the position of play again button
   playAgainGame.place( relx=0.52, rely=0.95, anchor=SW )
 
+  # ---------------------- DISKS ---------------------------
+  # creates the smallest disk object of the image in the path
+  disk1 = ImageTk.PhotoImage( Image.open("1.png") )
+  # sets the x and y-positions of smallest disk
+  allPositionX.append(10)
+  allPositionY.append(0)
+  # displays the smallest disk png on the specific position
+  canvas.create_image( allPositionY[0], allPositionX[0], anchor=NW, image=disk1 )
+
 
 def TowerOfHanoi(disk, from_rod, to_rod, aux_rod):
     if disk == 0:
@@ -67,10 +77,7 @@ def TowerOfHanoi(disk, from_rod, to_rod, aux_rod):
     TowerOfHanoi(disk-1, aux_rod, to_rod, from_rod)
 
 
-def TowerOfHanoi( disk , from_rod, to_rod, aux_rod ):
-
-
-def playAgainTowerOfHanoi():
+# def playAgainTowerOfHanoi():
 
 
 # starts the main event loop of the GUI window
