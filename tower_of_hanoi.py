@@ -30,8 +30,8 @@ def towerOfHanoi_start():
   allPositionY=[]
   # creates a label widget for number of moves
   moves = Label( towerOfHanoiWindow, text=f"{movescount} Moves", fg="#FFFFFF", font=("Arial 20"), bg="#1E2665" )
-  # creates a label widget for number of moves
-  moves = Label( towerOfHanoiWindow, text=f"{movescount} Moves", fg="#FFFFFF", font=("Arial 20"), bg="#1E2665" )
+  # sets label widget's position and centered alignment
+  moves.place( relx=0.5, rely=0.22, anchor=CENTER )
 
 
 
