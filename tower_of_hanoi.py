@@ -28,14 +28,21 @@ def towerOfHanoi_start():
   allPositionX=[]
   # sets the y - position of disk
   allPositionY=[]
+
   # creates a label widget for number of moves
   moves = Label( towerOfHanoiWindow, text=f"{movescount} Moves", fg="#FFFFFF", font=("Arial 20"), bg="#1E2665" )
   # sets label widget's position and centered alignment
   moves.place( relx=0.5, rely=0.22, anchor=CENTER )
+
   # sets the canvas width and height which contains the poles png and disks' images
   canvas = Canvas( towerOfHanoiWindow, width=550, height=350, background="#1E2665", bd=0, highlightthickness=0 )  
   # sets the position of canvas and centered alignment
   canvas.place( relx=0.5, rely=0.6, anchor=CENTER )
+
+  # creates the poles object of the image in the path
+  pole = ImageTk.PhotoImage( Image.open("poles.png") )
+  # displays the image on the specific position
+  canvas.create_image( -20, -20, anchor=NW, image=pole )
 
 
 
