@@ -44,6 +44,12 @@ def towerOfHanoi_start():
   # displays the image on the specific position
   canvas.create_image( -20, -20, anchor=NW, image=pole )
 
+  # creates a start button that pass the function of TowerOfHanoi
+  startGame = Button( towerOfHanoiWindow, text ="START", fg="#FFFFFF", font=("Arial 30 bold"), bg="#FFFFFF", activebackground="#FFFFFF", highlightbackground="#71CAD3", justify=CENTER, command=lambda:TowerOfHanoi(4 , 0, 360, 180), width=12, bd=0 )
+  # sets the background color of start button
+  startGame.configure( bg="#555B91" )
+  # sets the position of start button
+  startGame.place( relx=0.5, rely=0.95, anchor=SE )
 
 
 def TowerOfHanoi(disk, from_rod, to_rod, aux_rod):
