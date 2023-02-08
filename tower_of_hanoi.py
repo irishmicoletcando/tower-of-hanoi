@@ -1,3 +1,7 @@
+from tkinter import * # sets up the GUI window
+from PIL import ImageTk,Image # for displaying and positioning images
+import time # used for delaying function for a specified number of seconds
+
 def TowerOfHanoi(disk, from_rod, to_rod, aux_rod):
     if disk == 0:
         return
@@ -7,7 +11,7 @@ def TowerOfHanoi(disk, from_rod, to_rod, aux_rod):
  
  
 # Driver code
-N = 3
+N = 8
  
 # A, C, B are the name of rods
 TowerOfHanoi(N, 'A', 'C', 'B')
