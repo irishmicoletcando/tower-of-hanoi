@@ -98,8 +98,8 @@ def towerOfHanoi_start():
 # implements the logic of the Tower of Hanoi game
 # takes four arguments, the number of disks (disk), the source (from_rod), destination (to_rod), and auxiliary poles (aux_rod)
 def TowerOfHanoi(disk, from_rod, to_rod, aux_rod):
+    global movescount, moves
     if disk == 0:
-      global movescount, moves
       movescount+=1
       # displays the number of moves made during the game
       moves.configure( text=str(movescount) + " Moves" )
