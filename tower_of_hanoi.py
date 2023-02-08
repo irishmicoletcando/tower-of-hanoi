@@ -76,6 +76,14 @@ def towerOfHanoi_start():
   # displays the second smallest disk png on the specific position
   canvas.create_image( allPositionY[1], allPositionX[1], anchor=NW, image=disk2 )
 
+  # creates the second largest disk object of the image in the path
+  disk3 = ImageTk.PhotoImage( Image.open("3.png") )
+  # sets the x and y-positions of second largest disk
+  allPositionX.append(100)
+  allPositionY.append(0)
+  # displays the second largest disk png on the specific position
+  canvas.create_image( allPositionY[2], allPositionX[2], anchor=NW, image=disk3 )
+
 
 def TowerOfHanoi(disk, from_rod, to_rod, aux_rod):
     if disk == 0:
