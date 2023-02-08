@@ -114,7 +114,10 @@ def TowerOfHanoi(disk, from_rod, to_rod, aux_rod):
 # takes two arguments, the item (disk) to be moved and its destination (to_rod)
 def move( item, to_rod ):
   global disk1, disk2, disk3, disk4
-  
+  # checks if disk 1 is not already on the target rod (specified by the "to_rod" variable) before moving it
+  if( allPositionY[0]!=to_rod ):
+    # loads an image of disk 1 and displays it on the canvas widget
+    disk1 = ImageTk.PhotoImage( Image.open("1.png") )
 
 def playAgainTowerOfHanoi():
   movescount = 0
