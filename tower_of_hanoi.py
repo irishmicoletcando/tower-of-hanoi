@@ -5,9 +5,9 @@ import time # used for delaying function for a specified number of seconds
 # displays window and components
 towerOfHanoiWindow = Tk()
 # sets the title of window
-towerOfHanoiWindow.title( "Tower of Hanoi Solver" )
+towerOfHanoiWindow.title( "Tower of Hanoi 4-disk Solver" )
 # sets size of window with a width of 800 and height of 500
-towerOfHanoiWindow.geometry( "800x500")
+towerOfHanoiWindow.geometry( "800x500" )
 # sets opacity of window; 1 - no opacity 
 towerOfHanoiWindow.attributes( "-alpha", 1 )
 # sets background color of window 
